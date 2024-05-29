@@ -5,8 +5,8 @@ import { Box, Drawer, Input, List, ListItem } from "@mui/material"
   return (
     <Drawer
     open={true}
-    anchor='right',
-    sx={{backdropFilter: 'plur(4px', transition: 'all 0.5s ease-out'}}
+    anchor='right'
+    sx={{backdropFilter: 'plur(4px)', transition: 'all 0.5s ease-out' }}
     >
       <Box>
        <List>
