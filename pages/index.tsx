@@ -1,32 +1,17 @@
-import { Card, CardActionArea, CardMedia, Grid, Typography } from "@mui/material"
-import { ShopLayout } from "../components/layouts"
+import { Card, CardActionArea, CardMedia, Grid, Typography } from '@mui/material'
+import { ShopLayout } from '../components/layouts'
+import { ProductList } from '../components/products'
 
-import { initialData } from "../database/products"
+import { initialData } from '../database/products'
 
 
-export default function Homoe () {
+export default function Home() {
   return (
-    <ShopLayout title= {'Ecommerce Sena - Home'} pageDescription= {'Encuentra los mejores articular para tí'}>
+    <ShopLayout titile={'Ecommerce Sena - Home'} pageDescription={'Encuentra los mejores articulos para tu setup'}>
       <Typography variant='h1' component='h1'>Tienda</Typography>
       <Typography variant='h2' sx={{ mb: 1 }}>Articulos</Typography>
 
-      <Grid container spacing={4}>
-        {
-          initialData.products.map(product => (
-            <Grid item xs={6} sm={4} key={product.slug}>
-              <Card>
-                <CardActionArea>
-                  <CardMedia
-                  component='img'
-                  image={`products/${product.images[0]}`}
-                  alt={product.title}
-                  />
-                </CardActionArea>
-              </Card>
-            </Grid>
-          ))
-        }
-      </Grid>
-      </ShopLayout>
+      <ProductList products={initialData.products as any} />
+    </ShopLayout>
   )
 }
