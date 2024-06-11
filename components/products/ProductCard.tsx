@@ -1,13 +1,16 @@
+import { Grid, Card, CardActionArea, CardMedia, Box, Typography, Link } from "@mui/material";
 import { FC, useMemo, useState } from "react"
-import { IProduct } from "../../interface"
-import { Grid, Card, CardActionArea, CardMedia, Box, Typography } from "@mui/material";
+import { IProduct } from "../../interfaces"
+
+import NextLink from 'next/link'
+
 
 
 interface Props {
     product: IProduct;
 }
 
-const productCard: FC<Props> = ({ product }) => {
+export const productCard: FC<Props> = ({ product }) => {
     const [ isHovered, setIsHovered] = useState(false)
     const productImage = useMemo(()=> {
         return isHovered
@@ -23,15 +26,20 @@ const productCard: FC<Props> = ({ product }) => {
      onMouseLeave={() => setIsHovered(false)}
      >
     <Card>
-      <CardActionArea>
-        <CardMedia
-        component='img'
-        image={`products/${product.images[1]}`}
-        alt={product.title}
-        />
-      </CardActionArea>
+      <NextLink href = '/product/slug' passHref prefetch={false} legacyBehavior>
+        <Link>
+          <CardActionArea>
+         <CardMedia
+           component='img'
+           image={productImage}
+           alt={product.title}
+          />
+        </CardActionArea>
+        </Link>
+      </NextLink>
+      
     </Card>
-    <Box sx={{ met:1 }} className='fadeIn'>
+    <Box sx={{ met: 1 }} className='fadeIn'>
         <Typography fontWeight={700}>{product.title}</Typography>
         <Typography fontWeight={500}>{`$${product.price}`}</Typography>
     </Box>
