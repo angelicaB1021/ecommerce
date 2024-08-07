@@ -109,3 +109,12 @@ export const SideMenu = () => {
     </Drawer>
   )
 }
+
+
+import React, { Component } from 'react';
+
+class MiComponente extends Component {
+  render() {
+    return <div>Hola, mundo!</div>;
+  }
+}

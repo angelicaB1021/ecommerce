@@ -1,3 +1,5 @@
+//Se crea una interfaz llamada SeedProduct 
+
 interface SeedProduct {
   description: string;
   images: string[];
@@ -209,7 +211,7 @@ export const initialData: SeedData = {
       inStock: 15,
       price: 69000,
       sizes: ['S', 'M', 'L', 'XL'],
-      slug: 'camiseta-logo-cent-developer-Github-copilot',
+      slug: 'camiseta-logo-cent-developer-Github-copilot1',
       type: 'camisetas',
       tags: ['Github'],
       title: "Camiseta Github Copilot",
@@ -222,7 +224,7 @@ export const initialData: SeedData = {
       inStock: 15,
       price: 69000,
       sizes: ['S', 'M', 'L', 'XL'],
-      slug: 'camiseta-logo-cent-developer-Github-copilot',
+      slug: 'camiseta-logo-cent-developer-Github-copilot2',
       type: 'camisetas',
       tags: ['Github'],
       title: "Camiseta Github Copilot",
@@ -235,7 +237,7 @@ export const initialData: SeedData = {
       inStock: 15,
       price: 69000,
       sizes: ['S', 'M', 'L', 'XL'],
-      slug: 'camiseta-logo-cent-developer-Github-copilot',
+      slug: 'camiseta-logo-cent-developer-Github-copilot3',
       type: 'camisetas',
       tags: ['Github'],
       title: "Camiseta Github Copilot",

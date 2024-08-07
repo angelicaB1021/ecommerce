@@ -3,6 +3,9 @@ import { FC, useMemo, useState } from "react"
 import { IProduct } from "../../interfaces"
 
 import NextLink from 'next/link'
+
+
+
 interface Props {
   product: IProduct;
 }
