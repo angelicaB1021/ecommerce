@@ -17,3 +17,4 @@ export interface IProduct {
 
 export type ISize = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | '3XL';
 export type IType = 'camisetas' | 'buzos' | 'gorras';
+// hice un cambio
