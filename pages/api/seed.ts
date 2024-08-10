@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { db, seedDatabase } from '../../database';
+import { db, seedDatabase} from '../../database';
 import { Product } from '../../models';
 
 type Data = {
